@@ -1,0 +1,413 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>x4GkRCU7uMydx2C-gt-10240749-2026-05-29T11:59:00.938Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_Hospitality_ETL-1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>csa2208@krce.ac.in</types1:CreatedBy>
+      <types1:CreationDate>2026-05-29T11:59:01Z</types1:CreationDate>
+      <types1:ModifiedBy>csa2208@krce.ac.in</types1:ModifiedBy>
+      <types1:ModificationDate>2026-05-29T12:03:01Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>csa2208@krce.ac.in</types1:PublishedBy>
+      <types1:PublicationDate>2026-05-29T12:03:07Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.tf_Hospitality_ETL-1/tf_Hospitality_ETL-1.tf.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   GUID="kegzvDQgJ0Tb9XitZsQOc9"
+                   displayName="tf_Hospitality_ETL"
+                   name="tf_Hospitality_ETL-1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="GUEST" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-Load-Guest-6sZOZcHlnUOe6eRP87hMm2</option>
+                  </options>
+               </field>
+               <field description="" name="ROOM_MASTER" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-Load-Hotel-16tevaa95qtjZ5pgTYKMkd</option>
+                  </options>
+               </field>
+               <field description="" name="CHECKIN_CHECKOUT" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:MT-CHECKIN-CHECKOUT-7Gr6WfBJwI4jO9v0dF1f4d</option>
+                  </options>
+               </field>
+               <field description="" name="BILLING" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:MT-BILLING-4kxdb2DDE6zjAOiNyqDxoI</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">false</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="mpqvb2o8" targetId="mpqvb2pu"/>
+               </start>
+               <eventContainer id="mpqvb2pu">
+                  <service id="mpqvb2o7">
+                     <title>GUEST</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_Load_Guest</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">6sZOZcHlnUOe6eRP87hMm2</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-Load-Guest-6sZOZcHlnUOe6eRP87hMm2">temp.GUEST</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.GUEST/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.GUEST/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.GUEST/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.GUEST/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.GUEST/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.GUEST/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.GUEST/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.GUEST/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.GUEST/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.GUEST/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.GUEST/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.GUEST/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.GUEST/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.GUEST/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="mpqvb2oe" targetId="mpqvb2rf"/>
+                  <events>
+                     <catch faultField="temp.GUEST/fault"
+                            id="mpqvb2ps"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.GUEST/fault"
+                            id="mpqvb2pt"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="mpqvb2rf">
+                  <service id="mpqvb2od">
+                     <title>ROOM_MASTER</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_Load_Hotel</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">16tevaa95qtjZ5pgTYKMkd</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-Load-Hotel-16tevaa95qtjZ5pgTYKMkd">temp.ROOM_MASTER</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.ROOM_MASTER/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="mpqvb2ok" targetId="mpqvb2t0"/>
+                  <events>
+                     <catch faultField="temp.ROOM_MASTER/fault"
+                            id="mpqvb2rd"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.ROOM_MASTER/fault"
+                            id="mpqvb2re"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="mpqvb2t0">
+                  <service id="mpqvb2oj">
+                     <title>CHECKIN_CHECKOUT</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">MT_CHECKIN_CHECKOUT</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">7Gr6WfBJwI4jO9v0dF1f4d</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="MT-CHECKIN-CHECKOUT-7Gr6WfBJwI4jO9v0dF1f4d">temp.CHECKIN_CHECKOUT</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.CHECKIN_CHECKOUT/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="mpqvb2oq" targetId="mpqvb2ul"/>
+                  <events>
+                     <catch faultField="temp.CHECKIN_CHECKOUT/fault"
+                            id="mpqvb2sy"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.CHECKIN_CHECKOUT/fault"
+                            id="mpqvb2sz"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="mpqvb2ul">
+                  <service id="mpqvb2op">
+                     <title>BILLING</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">MT_BILLING</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">4kxdb2DDE6zjAOiNyqDxoI</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="MT-BILLING-4kxdb2DDE6zjAOiNyqDxoI">temp.BILLING</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.BILLING/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.BILLING/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.BILLING/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.BILLING/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.BILLING/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.BILLING/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.BILLING/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.BILLING/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.BILLING/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.BILLING/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.BILLING/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.BILLING/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.BILLING/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.BILLING/output/FirstErrorCode">First Error Code</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="mpqvb2oz" targetId="mpqvb2xe"/>
+                  <events>
+                     <catch faultField="temp.BILLING/fault"
+                            id="mpqvb2uj"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.BILLING/fault"
+                            id="mpqvb2uk"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <eventContainer id="mpqvb2xe">
+                  <service id="mpqvb2ox">
+                     <title>ALTER</title>
+                     <serviceName>emailNotificationService</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Email To" source="constant">ananyasrinivasan003@gmail.com</parameter>
+                        <parameter name="Email Cc" source="constant">kowshitamil04@gmail.com</parameter>
+                        <parameter name="Email Bcc" source="constant">abinayasaminathan20@gmail.com</parameter>
+                        <parameter name="Email Subject" source="constant">PLS CHECKOUT SOON!!!!!!</parameter>
+                        <parameter name="Email Content Type" source="constant">text</parameter>
+                        <parameter name="Email Body" source="constant"> &lt;p&gt;&lt;strong&gt;&lt;span style="text-decoration: underline;"&gt;CHECK OUT IMMEDIATELY&amp;nbsp;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt; </parameter>
+                     </serviceInput>
+                     <serviceOutput/>
+                  </service>
+                  <link id="mpqvb2p0" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.dummyTF5895/fault"
+                            id="mpqvb2ou"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-Load-Guest-6sZOZcHlnUOe6eRP87hMm2"
+                              isByCopy="true"
+                              name="mt-Load-Guest-6sZOZcHlnUOe6eRP87hMm2">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-Load-Hotel-16tevaa95qtjZ5pgTYKMkd"
+                              isByCopy="true"
+                              name="mt-Load-Hotel-16tevaa95qtjZ5pgTYKMkd">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MT-CHECKIN-CHECKOUT-7Gr6WfBJwI4jO9v0dF1f4d"
+                              isByCopy="true"
+                              name="MT-CHECKIN-CHECKOUT-7Gr6WfBJwI4jO9v0dF1f4d">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="MT-BILLING-4kxdb2DDE6zjAOiNyqDxoI"
+                              isByCopy="true"
+                              name="MT-BILLING-4kxdb2DDE6zjAOiNyqDxoI">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>kegzvDQgJ0Tb9XitZsQOc9</types1:GUID>
+      <types1:DisplayName>tf_Hospitality_ETL</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2026-05-29T12:24:37.874Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

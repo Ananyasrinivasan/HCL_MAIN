@@ -1,0 +1,348 @@
+{
+  "name" : "HACKTHON_MAIN-1780057471758",
+  "sourceOrgId" : "9tQ5aVxoET1d4UA4MN190O",
+  "sourceOrgName" : "K RAMAKRISHNAN COLLEGE OF ENGINEERING",
+  "exportedObjects" : [ {
+    "objectGuid" : "4kxdb2DDE6zjAOiNyqDxoI",
+    "objectName" : "MT_BILLING",
+    "objectType" : "MTT",
+    "path" : "/Explore/HACKTHON_MAIN",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W0Z000000000017"
+      },
+      "objectRefs" : [ "eAVwIxJrtQLhQDeqo6GJ66", "5TTOIRlWBsNbyUVfJGWz2O", "a91Px2Tv3jMhFNLVkodz4O", "0N7H6ahqG9fc2KatNIvD2I" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "99IZalj1NAih0nVr00yUkQ",
+    "objectName" : "HACKTHON_MAIN",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "16tevaa95qtjZ5pgTYKMkd",
+    "objectName" : "MT_LOAD_ROOM",
+    "objectType" : "MTT",
+    "path" : "/Explore/HACKTHON_MAIN",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W0Z000000000014"
+      },
+      "objectRefs" : [ "eAVwIxJrtQLhQDeqo6GJ66", "6exygV32cYPch1OchhGuyp", "5TTOIRlWBsNbyUVfJGWz2O", "a91Px2Tv3jMhFNLVkodz4O", "azO3g3SuJCVjftfHHowOMS" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "6exygV32cYPch1OchhGuyp",
+    "objectName" : "stagee",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W0B000000000009"
+      },
+      "objectRefs" : [ "a91Px2Tv3jMhFNLVkodz4O" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "a91Px2Tv3jMhFNLVkodz4O",
+    "objectName" : "DESKTOP-ATSMOU1",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W25000000000002"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "kegzvDQgJ0Tb9XitZsQOc9",
+    "objectName" : "tf_Hospitality_ETL",
+    "objectType" : "TASKFLOW",
+    "path" : "/Explore/HACKTHON_MAIN",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "x4GkRCU7uMydx2C-gt-10240749-2026-05-29T11:59:00.938Z::tf.xml"
+      },
+      "objectRefs" : [ "4kxdb2DDE6zjAOiNyqDxoI", "16tevaa95qtjZ5pgTYKMkd", "6sZOZcHlnUOe6eRP87hMm2", "7Gr6WfBJwI4jO9v0dF1f4d" ],
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "azO3g3SuJCVjftfHHowOMS",
+    "objectName" : "M_ROOM_MASTER",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/HACKTHON_MAIN",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W1700000000001E"
+      },
+      "objectRefs" : [ "eAVwIxJrtQLhQDeqo6GJ66", "6exygV32cYPch1OchhGuyp", "5TTOIRlWBsNbyUVfJGWz2O" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "dylUSyEgPWBkCefnpGoPwr",
+    "objectName" : "M_CHECKIN_CHECKOUT",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/HACKTHON_MAIN",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W1700000000001F"
+      },
+      "objectRefs" : [ "eAVwIxJrtQLhQDeqo6GJ66", "6exygV32cYPch1OchhGuyp", "5TTOIRlWBsNbyUVfJGWz2O" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "eAVwIxJrtQLhQDeqo6GJ66",
+    "objectName" : "oracle_HR",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W0B000000000004"
+      },
+      "objectRefs" : [ "a91Px2Tv3jMhFNLVkodz4O" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "in6kyGiQEsBebMgR1u0GYs",
+    "objectName" : "M_GUEST_MASTER",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/HACKTHON_MAIN",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W1700000000001D"
+      },
+      "objectRefs" : [ "eAVwIxJrtQLhQDeqo6GJ66", "5TTOIRlWBsNbyUVfJGWz2O" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "5TTOIRlWBsNbyUVfJGWz2O",
+    "objectName" : "stage",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W0B000000000005"
+      },
+      "objectRefs" : [ "a91Px2Tv3jMhFNLVkodz4O" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "STAGE",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    }
+  }, {
+    "objectGuid" : "0N7H6ahqG9fc2KatNIvD2I",
+    "objectName" : "M_BILLING",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/HACKTHON_MAIN",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W1700000000001G"
+      },
+      "objectRefs" : [ "eAVwIxJrtQLhQDeqo6GJ66", "5TTOIRlWBsNbyUVfJGWz2O" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  }, {
+    "objectGuid" : "6sZOZcHlnUOe6eRP87hMm2",
+    "objectName" : "MT_LOAD_GUEST",
+    "objectType" : "MTT",
+    "path" : "/Explore/HACKTHON_MAIN",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W0Z000000000013"
+      },
+      "objectRefs" : [ "eAVwIxJrtQLhQDeqo6GJ66", "in6kyGiQEsBebMgR1u0GYs", "5TTOIRlWBsNbyUVfJGWz2O", "a91Px2Tv3jMhFNLVkodz4O" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "INVALID"
+      }
+    }
+  }, {
+    "objectGuid" : "7Gr6WfBJwI4jO9v0dF1f4d",
+    "objectName" : "MT_CHECKIN_CHECKOUT",
+    "objectType" : "MTT",
+    "path" : "/Explore/HACKTHON_MAIN",
+    "providerName" : null,
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01DN3W0Z000000000015"
+      },
+      "objectRefs" : [ "dylUSyEgPWBkCefnpGoPwr", "eAVwIxJrtQLhQDeqo6GJ66", "6exygV32cYPch1OchhGuyp", "5TTOIRlWBsNbyUVfJGWz2O", "a91Px2Tv3jMhFNLVkodz4O" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  } ]
+}
